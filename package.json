@@ -1,0 +1,22 @@
+{
+  "name": "@apidog/vk-typings",
+  "version": "0.1.0",
+  "description": "Typings for VK objects",
+  "main": "src/index.ts",
+  "scripts": {},
+  "author": "APIdog",
+  "license": "GPLv3",
+  "bugs": {
+    "url": "https://github.com/APIdogRU/vk-typings/issues",
+    "email": "vladislav805@yandex.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github:APIdogRU/vk-typings"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "12.12.14",
+    "typescript": "3.7.2"
+  }
+}
