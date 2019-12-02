@@ -17,6 +17,7 @@ export interface IVKMessage {
     payload?: string;
     keyboard?: IVKKeyboard;
     fwd_messages?: IVKMessage[];
+    reply_message?: IVKMessage;
     action?: IVKMessageAction;
 }
 

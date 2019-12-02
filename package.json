@@ -1,6 +1,6 @@
 {
   "name": "@apidog/vk-typings",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Typings for VK objects",
   "scripts": {},
   "types": "src/index.ts",
