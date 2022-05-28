@@ -8,4 +8,6 @@ export interface IVkApiErrorObject {
     captcha_sid?: string;
     captcha_img?: string;
     redirect_uri?: string;
+    /** Локализованное человеческое описание ошибки, бывает крайне редко */
+    error_text?: string;
 }

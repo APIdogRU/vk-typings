@@ -1,12 +1,12 @@
 import type { IAudioMessage } from './IAudioMessage';
 import type { IDocument } from './IDocument';
 
-interface IDocumentJustUploadedDocument {
+export interface IDocumentJustUploadedDocument {
     type: 'doc';
     doc: IDocument;
 }
 
-interface IDocumentJustUploadedAudioMessage {
+export interface IDocumentJustUploadedAudioMessage {
     type: 'audio_message';
     audio_message: IAudioMessage;
 }

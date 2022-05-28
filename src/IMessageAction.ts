@@ -46,7 +46,12 @@ export interface IMessageActionInviteUserByLink {
 
 export interface IMessageActionScreenshot {
     type: 'chat_screenshot';
-    member_id?: number;
+    member_id: number;
+}
+
+export interface IMessageActionConversationStyleUpdate {
+    type: 'conversation_style_update';
+    member_id: number;
 }
 
 export type IMessageAction =
@@ -59,4 +64,5 @@ export type IMessageAction =
     | IMessageActionPinMessage
     | IMessageActionUnpinMessage
     | IMessageActionInviteUserByLink
-    | IMessageActionScreenshot;
+    | IMessageActionScreenshot
+    | IMessageActionConversationStyleUpdate;

@@ -36,6 +36,7 @@ interface IUserOnline {
 }
 
 interface IUserExtended {
+    can_post?: boolean;
     sex: number;
     can_write_private_message: boolean;
     maiden_name: string;

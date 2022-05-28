@@ -99,6 +99,7 @@ export interface IGroup {
     wall?: GroupWallType;
     wiki_page?: string;
     status_audio?: IAudio;
+    online_status?: IGroupOnlineStatus;
 }
 
 export type IGroupCounters = Partial<{
@@ -109,3 +110,7 @@ export type IGroupCounters = Partial<{
     topics?: number;
     docs?: number;
 }>;
+
+export interface IGroupOnlineStatus {
+    status: 'online' | 'none';
+}

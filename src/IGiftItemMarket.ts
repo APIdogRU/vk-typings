@@ -9,4 +9,5 @@ export interface IGiftItemMarket {
     real_price?: number;
     real_price_str?: string;
     description?: string;
+    disabled?: boolean;
 }

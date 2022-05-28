@@ -6,7 +6,7 @@ export interface IPollBackgroundGradient {
     color: string;
     id: number;
     name: string;
-    points: IPollBackgroundGradientPoint;
+    points: IPollBackgroundGradientPoint[];
 }
 
 export interface IPollBackgroundGradientPoint {

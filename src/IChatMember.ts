@@ -4,4 +4,5 @@ export interface IChatMember {
     join_date: number;
     is_admin?: boolean;
     is_owner?: boolean;
+    can_kick?: boolean;
 }

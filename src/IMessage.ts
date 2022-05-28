@@ -29,4 +29,6 @@ export interface IMessage {
     was_listened?: boolean;
     pinned_at?: number;
     message_tag?: string;
+    is_expired?: boolean;
+    expire_ttl?: number;
 }

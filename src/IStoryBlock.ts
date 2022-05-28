@@ -4,6 +4,8 @@ import type { IStory } from './IStory';
 export interface IStoryBlockStories {
     type: 'stories';
     stories: IStory[];
+    has_unseen?: boolean;
+    name: string;
 }
 
 export interface IStoryBlockGrouped {

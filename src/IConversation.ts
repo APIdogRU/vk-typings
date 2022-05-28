@@ -10,8 +10,8 @@ export interface IConversation {
     in_read: number;
     out_read: number;
     last_conversation_message_id: number;
-    in_read_cmid: number;
-    out_read_cmid: number;
+    in_read_cmid?: number;
+    out_read_cmid?: number;
     is_marked_unread?: boolean;
     important?: boolean;
     can_write: IChatAccess;

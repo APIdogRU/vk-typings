@@ -1,13 +1,17 @@
+import type { IArticle } from './IArticle';
 import type { IAudio } from './IAudio';
 import type { IAudioMessage } from './IAudioMessage';
 import type { IAudioPlaylist } from './IAudioPlaylist';
+import type { ICall } from './ICall';
 import type { IComment } from './IComment';
 import type { IDocument } from './IDocument';
 import type { IEvent } from './IEvent';
 import type { IGift } from './IGift';
+import type { IGraffiti } from './IGraffiti';
 import type { ILink } from './ILink';
 import type { IMarket } from './IMarket';
 import type { IMarketAlbum } from './IMarketAlbum';
+import type { IMiniApp } from './IMiniApp';
 import type { INote } from './INote';
 import type { IPhoto } from './IPhoto';
 import type { IPhotoAlbum } from './IPhotoAlbum';
@@ -49,6 +53,10 @@ type IAttachmentMarket = IAttachmentBase<'market', IMarket>;
 type IAttachmentMarketAlbum = IAttachmentBase<'market_album', IMarketAlbum>;
 type IAttachmentPrettyCards = IAttachmentBase<'pretty_cards', IPrettyCards>;
 type IAttachmentStory = IAttachmentBase<'story', IStory>;
+type IAttachmentArticle = IAttachmentBase<'article', IArticle>;
+type IAttachmentCall = IAttachmentBase<'call', ICall>;
+type IAttachmentGraffiti = IAttachmentBase<'graffiti', IGraffiti>;
+type IAttachmentMiniApp = IAttachmentBase<'mini_app', IMiniApp>;
 
 export type IAttachment =
     | IAttachmentPhoto
@@ -71,7 +79,11 @@ export type IAttachment =
     | IAttachmentMarket
     | IAttachmentMarketAlbum
     | IAttachmentPrettyCards
-    | IAttachmentStory;
+    | IAttachmentStory
+    | IAttachmentArticle
+    | IAttachmentCall
+    | IAttachmentGraffiti
+    | IAttachmentMiniApp;
 
 export type IAttachments = IAttachment[];
 

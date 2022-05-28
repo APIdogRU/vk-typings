@@ -13,7 +13,7 @@ interface IStoryBase<T extends 'photo' | 'video'> {
     /** Если true, то объект содержит только поля id, owner_id, is_deleted */
     is_expired?: boolean;
     /** Если true, то объект содержит только поля id, owner_id, is_deleted */
-    id_deleted?: boolean;
+    is_deleted?: boolean;
     can_see?: 1;
     link?: IStoryLink;
     parent_story_owner_id?: number;
@@ -26,6 +26,13 @@ interface IStoryBase<T extends 'photo' | 'video'> {
     clickable_stickers?: IStoryClickableStickers;
     views: number;
     access_key?: string;
+    seen?: boolean;
+    is_one_time?: boolean;
+    reaction_set_id?: 'reactions';
+    no_sound?: boolean;
+    can_ask?: 0 | 1;
+    can_ask_anonymous?: 0 | 1;
+    preloading_enabled?: boolean;
 }
 
 export interface IStoryPhoto extends IStoryBase<'photo'> {
