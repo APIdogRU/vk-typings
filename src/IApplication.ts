@@ -1,0 +1,40 @@
+import type { IPhoto } from './IPhoto';
+
+export interface IApplication {
+    id: number;
+    type: 'standalone' | 'mini_app' | 'site' | 'game' | 'app';
+    title: string;
+    are_notifications_enabled: boolean;
+    author_owner_id: number;
+    author_url: string;
+    author_group?: number;
+    author_id?: number;
+    banner_1120: string;
+    banner_560: string;
+    hide_tabbar: boolean;
+    icon_75: string;
+    icon_139: string;
+    icon_150: string;
+    icon_278: string;
+    icon_576: string;
+    international: 0 | 1;
+    is_favorite: boolean;
+    is_in_catalog: boolean;
+    is_installed: boolean;
+    leaderboard_type: 0 | 1 | 2;
+    catalog_position: number;
+    published_date: number;
+    members_count: number;
+    open_in_external_browser: boolean;
+    share_url?: string;
+    webview_url?: string;
+    is_vkui_internal?: boolean;
+    has_vk_connect?: boolean;
+    genre_id?: number;
+    genre?: string;
+    platform_id?: string;
+    description?: string;
+    screen_name?: string;
+    icon_16?: string;
+    screenshoots?: IPhoto[];
+}

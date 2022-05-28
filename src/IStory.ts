@@ -1,0 +1,39 @@
+import type { IPhoto } from './IPhoto';
+import type { IStoryClickableStickers } from './IStoryClickableStickers';
+import type { IStoryLink } from './IStoryLink';
+import type { IStoryReplies } from './IStoryReplies';
+import type { IVideo } from './IVideo';
+
+interface IStoryBase<T extends 'photo' | 'video'> {
+    type: T;
+    owner_id: number;
+    id: number;
+    date: number;
+    expires_at: number;
+    /** Если true, то объект содержит только поля id, owner_id, is_deleted */
+    is_expired?: boolean;
+    /** Если true, то объект содержит только поля id, owner_id, is_deleted */
+    id_deleted?: boolean;
+    can_see?: 1;
+    link?: IStoryLink;
+    parent_story_owner_id?: number;
+    parent_story_id?: number;
+    parent_story?: IStory;
+    replies?: IStoryReplies;
+    can_reply?: 0 | 1;
+    can_share?: 0 | 1;
+    can_comment?: 0 | 1;
+    clickable_stickers?: IStoryClickableStickers;
+    views: number;
+    access_key?: string;
+}
+
+export interface IStoryPhoto extends IStoryBase<'photo'> {
+    photo: IPhoto;
+}
+
+export interface IStoryVideo extends IStoryBase<'video'> {
+    video: IVideo;
+}
+
+export type IStory = IStoryPhoto | IStoryVideo;

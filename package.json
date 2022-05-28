@@ -1,8 +1,12 @@
 {
   "name": "@apidog/vk-typings",
-  "version": "0.2.1",
-  "description": "Typings for VK objects",
-  "scripts": {},
+  "version": "1.0.0-beta.1",
+  "description": "Typings for VK API objects",
+  "scripts": {
+    "prepublish": "npm run generate:index && npm run typechecking",
+    "generate:index": "node -e \"console.log(require('fs').readdirSync('src').filter(f=>f!=='index.ts').map(f=>'export * from \\'./'+f.replace(/\\.ts$/ig, '')+'\\';').join('\\n'))\" > src/index.ts",
+    "typechecking": "tsc --noEmit"
+  },
   "types": "src/index.ts",
   "author": "APIdog",
   "license": "GPLv3",
@@ -16,7 +20,7 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@types/node": "14.6.0",
-    "typescript": "3.9.7"
+    "@types/node": "17.0.36",
+    "typescript": "4.7.2"
   }
 }
