@@ -1,6 +1,6 @@
 {
   "name": "@apidog/vk-typings",
-  "version": "1.0.0-beta.1",
+  "version": "1.0.0-beta.2",
   "description": "Typings for VK API objects",
   "scripts": {
     "prepublish": "npm run generate:index && npm run typechecking",

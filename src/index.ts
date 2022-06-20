@@ -42,6 +42,7 @@ export * from './IGiftItemMarket';
 export * from './IGraffiti';
 export * from './IGroup';
 export * from './IGroupBanInfo';
+export * from './IGroupBanItem';
 export * from './IGroupContact';
 export * from './IGroupCover';
 export * from './IGroupCropPhoto';

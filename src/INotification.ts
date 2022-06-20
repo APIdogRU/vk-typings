@@ -14,6 +14,7 @@ interface INotificationBase<
     feedback: Feedback;
     parent: Parent;
     reply?: Reply;
+    date: number;
 }
 
 type IList<T> = { items: T[] };
@@ -33,10 +34,10 @@ export type INotificationTypeMentionComments =
     INotificationBase<'mention_comments', IComment, IPost>;
 
 export type INotificationTypeMentionCommentsPhoto =
-    INotificationBase<'mention_comment_photo', IComment, IPost>;
+    INotificationBase<'mention_comment_photo', IComment, ICommentOf<'photo', IPhoto>>;
 
 export type INotificationTypeMentionCommentsVideo =
-    INotificationBase<'mention_comment_video', IComment, IPost>;
+    INotificationBase<'mention_comment_video', IComment, ICommentOf<'video', IVideo>>;
 
 export type INotificationTypeWall =
     INotificationBase<'wall', IPost>;
@@ -60,7 +61,7 @@ export type INotificationTypeReplyCommentVideo =
     INotificationBase<'reply_comment_video', IComment, ICommentOf<'video', IVideo>, IComment>;
 
 export type INotificationTypeReplyTopic =
-    INotificationBase<'reply_topic', IComment, ITopic, IComment>;
+    INotificationBase<'reply_topic', IComment, ITopic & { owner_id: number }, IComment>;
 
 export type INotificationTypeLikePost =
     INotificationBase<'like_post', IList<IFromUser>, IPost>;

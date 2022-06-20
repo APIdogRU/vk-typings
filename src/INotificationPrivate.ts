@@ -1,3 +1,5 @@
+import type { IPhotoSize } from './IPhotoSize';
+
 /** Абсолютно неточный тип */
 export interface INotificationPrivate {
     /** Идентификатор новости */
@@ -5,10 +7,7 @@ export interface INotificationPrivate {
     /** Дата новости */
     date: number;
     /** Кто инициатор новости */
-    main_item: {
-        type: 'user' | 'group';
-        object_id: string; // Хотя здесь число в строке
-    };
+    main_item: INotificationPrivateMainItem;
     action_buttons?: {
         right: {
             label: string;
@@ -29,13 +28,19 @@ export interface INotificationPrivate {
         action: INotificationPrivateActionCustom;
     }[];
     buttom_hide?: boolean;
-    action?: INotificationPrivateActionCustom;
+    action?: INotificationPrivateAction;
     additional_item?: {
         action: INotificationPrivateAction;
         object_id: string;
         type: string;
     };
+    text: string;
 }
+
+type INotificationPrivateMainItem =
+    | { type: 'user' | 'group'; object_id: string; }
+    | { type: 'image'; image_object: IPhotoSize[]; }
+;
 
 interface INotificationPrivateActionBase<T extends string> {
     type: T;
@@ -61,8 +66,13 @@ export interface INotificationPrivateActionUngroup extends INotificationPrivateA
     };
 }
 
+export interface INotificationPrivateActionAuthorize extends INotificationPrivateActionBase<'authorize'> {
+
+}
+
 export type INotificationPrivateAction =
     | INotificationPrivateActionHideItem
     | INotificationPrivateActionCustom
     | INotificationPrivateActionUngroup
+    | INotificationPrivateActionAuthorize
 ;
