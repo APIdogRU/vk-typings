@@ -1,3 +1,4 @@
+import type { IAccountPhotoSize } from './IAccountPhotoSize';
 import type { IAudio } from './IAudio';
 import type { ICity } from './ICity';
 import type { ICountry } from './ICountry';
@@ -7,7 +8,7 @@ import type { IUserCounters } from './IUserCounters';
 import type { IUserOnlineInfo } from './IUserOnlineInfo';
 import type { IUserRelative } from './IUserRelative';
 
-export interface IUser extends Partial<IUserNameCases>, Partial<IUserPhotoSizeObject>, IUserOnline, Partial<IUserExtended> {
+export interface IUser extends Partial<UserNameCase>, Partial<IUserPhotoSizeObject>, IUserOnline, Partial<IUserExtended> {
     id: number;
     first_name: string;
     last_name: string;
@@ -16,13 +17,10 @@ export interface IUser extends Partial<IUserNameCases>, Partial<IUserPhotoSizeOb
     can_access_closed?: boolean;
 }
 
-type UserNameCase = 'nom' | 'gen' | 'dat' | 'acc' | 'ins' | 'abl';
-type IUserNameCases = Record<`first_name_${UserNameCase}` | `last_name_${UserNameCase}`, string>;
+type UserNameCaseName = 'nom' | 'gen' | 'dat' | 'acc' | 'ins' | 'abl';
+export type UserNameCase = Record<`first_name_${UserNameCaseName}` | `last_name_${UserNameCaseName}`, string>;
 
-interface IUserPhotoSizeObject {
-    photo_50?: string;
-    photo_100?: string;
-    photo_200?: string;
+interface IUserPhotoSizeObject extends IAccountPhotoSize {
     photo_200_orig?: string;
     photo_400_orig?: string;
     photo_id?: string;

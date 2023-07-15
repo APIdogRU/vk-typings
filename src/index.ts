@@ -1,4 +1,5 @@
 export * from './IAccount';
+export * from './IAccountPhotoSize';
 export * from './IApplication';
 export * from './IArticle';
 export * from './IAttachments';

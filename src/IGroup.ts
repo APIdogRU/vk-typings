@@ -1,3 +1,4 @@
+import type { IAccountPhotoSize } from './IAccountPhotoSize';
 import type { IAudio } from './IAudio';
 import type { ICity } from './ICity';
 import type { ICountry } from './ICountry';
@@ -45,7 +46,7 @@ export const enum GroupWallType {
     CLOSED = 3
 }
 
-export interface IGroup {
+export interface IGroup extends IAccountPhotoSize {
     id: number;
     name: string;
     screen_name: string;
@@ -57,9 +58,6 @@ export interface IGroup {
     is_advertiser?: boolean;
     invited_by?: number;
     type: GroupType;
-    photo_50?: string;
-    photo_100?: string;
-    photo_200?: string;
 
     activity?: string;
     age_limits?: GroupAgeLimits;

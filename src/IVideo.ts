@@ -35,7 +35,9 @@ export interface IVideo {
     can_repost: boolean;
     can_subscribe: boolean;
     can_add_to_faves: boolean;
-    files?: Partial<Record<VideoFilesKey, string>>;
+    files?: Partial<Record<VideoFilesKey, string>> & {
+        failover_host?: string;
+    };
     likes?: Pick<ILikesInfo, 'count' | 'user_likes'>;
     reposts?: IRepostsInfo;
     privacy_view?: IPhotoPrivacy;
