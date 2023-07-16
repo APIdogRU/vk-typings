@@ -36,7 +36,7 @@ interface IStoryBase<T extends 'photo' | 'video'> {
 }
 
 export interface IStoryPhoto extends IStoryBase<'photo'> {
-    photo: IPhoto;
+    photo: Omit<IPhoto, 'likes' | 'reposts'>;
 }
 
 export interface IStoryVideo extends IStoryBase<'video'> {

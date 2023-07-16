@@ -20,7 +20,7 @@ export interface IPoll {
     anonymous: boolean;
     answer_ids?: number[];
     answers: IPollAnswer[];
-    author_id?: boolean;
+    author_id?: number;
     photo?: IPhoto;
     background?: IPollBackground;
     friends?: { id: number }[];
