@@ -24,4 +24,5 @@ export interface IConversation {
     unanswered?: boolean;
     push_settings?: IPushSettings;
     current_keyboard?: IKeyboard;
+    is_archived?: boolean;
 }
