@@ -42,6 +42,7 @@ export interface IVideo {
     reposts?: IRepostsInfo;
     privacy_view?: IPhotoPrivacy;
     privacy_comment?: IPhotoPrivacy;
+    track_code: string;
     // Неизвестно что это
-    response_type?: 'full';
+    response_type?: 'full' | 'min';
 }
