@@ -7,5 +7,5 @@ export interface IAudioMessage {
     link_ogg: string;
     link_mp3: string;
     transcript?: string;
-    transcript_state: 'done';
+    transcript_state: 'done' | 'in_progress';
 }

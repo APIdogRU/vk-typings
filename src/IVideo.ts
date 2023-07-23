@@ -2,6 +2,7 @@ import type { ILikesInfo } from './ILikesInfo';
 import type { IPhotoPrivacy } from './IPhotoPrivacy';
 import type { IRepostsInfo } from './IRepostsInfo';
 import type { IVideoImage } from './IVideoImage';
+import type { IVideoTimelineThumbs } from './IVideoTimelineThumbs';
 import type { VideoFilesKey } from './VideoFiles';
 
 export interface IVideo {
@@ -34,10 +35,18 @@ export interface IVideo {
     can_like: boolean;
     can_repost: boolean;
     can_subscribe: boolean;
+    /** only without callback */
     can_add_to_faves: boolean;
+    /** only without callback */
+    can_play_in_background?: boolean;
+    /** only without callback */
+    can_download?: boolean;
+    /** only without callback */
     files?: Partial<Record<VideoFilesKey, string>> & {
         failover_host?: string;
     };
+    /** only without callback */
+    timeline_thumbs?: IVideoTimelineThumbs;
     likes?: Pick<ILikesInfo, 'count' | 'user_likes'>;
     reposts?: IRepostsInfo;
     privacy_view?: IPhotoPrivacy;
