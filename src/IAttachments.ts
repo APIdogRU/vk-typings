@@ -22,6 +22,7 @@ import type { IPrettyCards } from './IPrettyCards';
 import type { ISticker } from './ISticker';
 import type { IStory } from './IStory';
 import type { IVideo } from './IVideo';
+import type { IVideoMessage } from './IVideoMessage';
 import type { IWikiPage } from './IWikiPage';
 
 // https://dev.vk.com/reference/objects/attachments-wall
@@ -46,6 +47,7 @@ type IAttachmentNote = IAttachmentBase<'note', INote>;
 type IAttachmentGift = IAttachmentBase<'gift', IGift>;
 type IAttachmentWallReply = IAttachmentBase<'wall_reply', IComment & { post_id: number; owner_id: number; }>;
 type IAttachmentAudioMessage = IAttachmentBase<'audio_message', IAudioMessage>;
+type IAttachmentVideoMessage = IAttachmentBase<'video_message', IVideoMessage>;
 type IAttachmentAudioPlaylist = IAttachmentBase<'audio_playlist', IAudioPlaylist>;
 type IAttachmentEvent = IAttachmentBase<'event', IEvent>;
 type IAttachmentPodcast = IAttachmentBase<'podcast', IPodcast>;
@@ -73,6 +75,7 @@ export type IAttachment =
     | IAttachmentGift
     | IAttachmentWallReply
     | IAttachmentAudioMessage
+    | IAttachmentVideoMessage
     | IAttachmentAudioPlaylist
     | IAttachmentEvent
     | IAttachmentPodcast
