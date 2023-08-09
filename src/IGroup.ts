@@ -65,8 +65,10 @@ export interface IGroup extends IAccountPhotoSize {
     can_create_topic?: boolean;
     can_message?: boolean;
     can_post?: boolean;
+    can_suggest?: boolean;
     can_see_all_posts?: boolean;
     can_upload_doc?: boolean;
+    can_upload_story?: boolean;
     can_upload_video?: boolean;
     country?: ICountry;
     city?: ICity;
