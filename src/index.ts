@@ -117,6 +117,7 @@ export * from './IVideo';
 export * from './IVideoAlbum';
 export * from './IVideoImage';
 export * from './IVideoMessage';
+export * from './IVideoRestriction';
 export * from './IVideoSection';
 export * from './IVideoTimelineThumbs';
 export * from './IViewsInfo';

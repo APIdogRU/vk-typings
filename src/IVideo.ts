@@ -2,6 +2,7 @@ import type { ILikesInfo } from './ILikesInfo';
 import type { IPhotoPrivacy } from './IPhotoPrivacy';
 import type { IRepostsInfo } from './IRepostsInfo';
 import type { IVideoImage } from './IVideoImage';
+import type { IVideoRestriction } from './IVideoRestriction';
 import type { IVideoTimelineThumbs } from './IVideoTimelineThumbs';
 import type { VideoFilesKey } from './VideoFiles';
 
@@ -54,4 +55,7 @@ export interface IVideo {
     track_code: string;
     // Неизвестно что это
     response_type?: 'full' | 'min';
+    content_restricted?: 1;
+    can_dislike?: 1;
+    restriction?: IVideoRestriction;
 }
