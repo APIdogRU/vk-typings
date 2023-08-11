@@ -3,7 +3,8 @@
   "version": "1.0.4",
   "description": "Typings for VK API objects",
   "scripts": {
-    "prepublish": "npm run generate:index && npm run typechecking",
+    "make-version": "node increment-version.js && npm publish",
+    "prepublishOnly": "npm run generate:index && npm run typechecking",
     "generate:index": "node -e \"console.log(require('fs').readdirSync('src').filter(f=>f!=='index.ts').map(f=>'export * from \\'./'+f.replace(/\\.ts$/ig, '')+'\\';').join('\\n'))\" > src/index.ts",
     "typechecking": "tsc --noEmit"
   },
