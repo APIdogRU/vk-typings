@@ -33,6 +33,7 @@ export * from './ICurrency';
 export * from './IDocument';
 export * from './IDocumentJustUploaded';
 export * from './IDocumentPreview';
+export * from './IDocumentType';
 export * from './IEvent';
 export * from './IFriendList';
 export * from './IGeo';
