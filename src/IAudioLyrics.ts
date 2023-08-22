@@ -1,3 +1,10 @@
+import type { IAudioLyricsTimestamp } from './IAudioLyricsTimestamp';
+
 export interface IAudioLyrics {
-    text: string;
+    md5: string;
+    lyrics: {
+        language: string; // ru, en
+        timestamps: IAudioLyricsTimestamp[];
+    };
+    credits: string;
 }

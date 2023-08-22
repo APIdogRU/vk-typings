@@ -11,6 +11,7 @@ export * from './IAudioArtist';
 export * from './IAudioCatalogItem';
 export * from './IAudioGenre';
 export * from './IAudioLyrics';
+export * from './IAudioLyricsTimestamp';
 export * from './IAudioMessage';
 export * from './IAudioPlaylist';
 export * from './ICall';
