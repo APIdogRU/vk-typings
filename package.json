@@ -1,6 +1,6 @@
 {
   "name": "@apidog/vk-typings",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Typings for VK API objects",
   "scripts": {
     "make-version": "node increment-version.js && npm publish",
