@@ -14,6 +14,9 @@ export interface IDocumentPreviewPhoto {
 
 export interface IDocumentPreviewVideo {
     src: string;
+    width: number;
+    height: number;
+    file_size: number;
 }
 
 export interface IDocumentPreviewGraffiti {

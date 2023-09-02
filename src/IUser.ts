@@ -15,6 +15,7 @@ export interface IUser extends Partial<UserNameCase>, Partial<IUserPhotoSizeObje
     deactivated?: 'deleted' | 'banned';
     is_closed?: boolean;
     can_access_closed?: boolean;
+    is_service?: boolean;
 }
 
 type UserNameCaseName = 'nom' | 'gen' | 'dat' | 'acc' | 'ins' | 'abl';
@@ -34,11 +35,21 @@ interface IUserOnline {
 }
 
 interface IUserExtended {
-    can_post?: boolean;
-    sex: number;
+    can_post: boolean;
     can_write_private_message: boolean;
+    can_see_gifts: boolean;
+    can_send_friend_request: boolean;
+    can_see_audio: boolean;
+    can_invite_to_chats: boolean;
+    can_be_invited_group: boolean;
+    can_upload_doc: boolean;
+    can_ban: boolean;
+    can_call: boolean;
+    can_see_all_posts: boolean;
+    service_description: string;
+    sex: number;
     maiden_name: string;
-    friend_status: number;
+    friend_status: FriendStatus;
     blacklisted: boolean;
     blacklisted_by_me: boolean;
     screen_name: string;
@@ -46,18 +57,21 @@ interface IUserExtended {
     lists: number[];
     bdate: string;
     is_favorite: boolean;
+    is_hidden_from_feed: boolean;
     last_seen: IUserLastSeen;
     crop_photo: IUserCropPhoto;
     nickname: string;
     country: ICountry;
     city: ICity;
     status: string;
+    has_mobile: boolean;
+    has_unseen_stories: boolean;
+    trending: boolean;
     mobile_phone: string;
     home_phone: string;
     home_town: string;
-    can_see_gifts: boolean;
-    counters: IUserCounters;
     common_count: number;
+    counters: IUserCounters;
     relatives: IUserRelative[];
     facebook_name: string;
     facebook: string;
@@ -67,7 +81,7 @@ interface IUserExtended {
     skype: string;
     livejournal: string;
     universities: IUniversityItem[];
-    relation: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8;
+    relation: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8;
     relation_partner: {
         id: number;
         first_name: string;
@@ -75,6 +89,9 @@ interface IUserExtended {
     };
     status_audio: IAudio;
     activity: string;
+    wall_comments?: 1;
+    wall_default?: 'all' | 'owner';
+    is_no_index?: boolean;
 }
 
 interface IUserLastSeen {
@@ -93,4 +110,11 @@ interface IUserCropPhoto {
     photo: IPhoto;
     crop: IUserCropPhotoCoords;
     rect: IUserCropPhotoCoords;
+}
+
+export const enum FriendStatus {
+    NOT_A_FRIEND = 0,
+    OUTCOMING_REQUEST = 1,
+    INCOMING_REQUEST = 2,
+    IS_FRIEND = 3,
 }

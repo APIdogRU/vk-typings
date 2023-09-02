@@ -27,7 +27,7 @@ export interface IPost {
     reposts: IRepostsInfo;
     views: IViewsInfo;
     type: string; // TODO
-    post_type: 'post' | 'copy' | 'reply' | 'postpone' | 'suggest';
+    post_type: 'post' | 'copy' | 'reply' | 'postpone' | 'suggest' | 'post_ads' | 'photo' | 'video';
     post_source?: IPostSource;
     attachments?: IAttachments;
     geo?: IGeo;
@@ -46,5 +46,5 @@ export interface IPost {
     is_archived?: boolean;
     edited?: number;
     activity?: IPostActivity;
-    zoom_text?: boolean;
+    short_text_rate?: number;
 }

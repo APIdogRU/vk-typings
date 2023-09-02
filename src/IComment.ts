@@ -9,6 +9,8 @@ export interface IComment {
     id: number;
     /** Пост, под которым написан комментарий */
     post_id: number;
+    photo_id?: number;
+    video_id?: number;
     /** Автор комментария */
     from_id: number;
     date: number;

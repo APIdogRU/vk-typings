@@ -5,4 +5,4 @@ export interface IPostSource {
     url: string;
 }
 
-export type PostSourceType = 'vk' | 'widget' | 'api' | 'rss' | 'sms';
+export type PostSourceType = 'vk' | 'widget' | 'api' | 'rss' | 'sms' | 'mvk';
