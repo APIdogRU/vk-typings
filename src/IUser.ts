@@ -3,6 +3,7 @@ import type { IAudio } from './IAudio';
 import type { ICity } from './ICity';
 import type { ICountry } from './ICountry';
 import type { IPhoto } from './IPhoto';
+import type { IStatusImage } from './IStatusImage';
 import type { IUniversityItem } from './IUniversityItem';
 import type { IUserCounters } from './IUserCounters';
 import type { IUserOnlineInfo } from './IUserOnlineInfo';
@@ -64,6 +65,7 @@ interface IUserExtended {
     country: ICountry;
     city: ICity;
     status: string;
+    image_status: IStatusImage;
     has_mobile: boolean;
     has_unseen_stories: boolean;
     trending: boolean;

@@ -98,6 +98,7 @@ export * from './IPushSettings';
 export * from './IRepostsInfo';
 export * from './ISchoolItem';
 export * from './ISearchHint';
+export * from './IStatusImage';
 export * from './ISticker';
 export * from './IStickerImage';
 export * from './IStickerpack';
