@@ -4,6 +4,7 @@ import type { ICity } from './ICity';
 import type { ICountry } from './ICountry';
 import type { IGroupBanInfo } from './IGroupBanInfo';
 import type { IGroupContact } from './IGroupContact';
+import type { IGroupCounters } from './IGroupCounters';
 import type { IGroupCover } from './IGroupCover';
 import type { IGroupCropPhoto } from './IGroupCropPhoto';
 import type { IGroupLink } from './IGroupLink';
@@ -101,15 +102,6 @@ export interface IGroup extends IAccountPhotoSize {
     status_audio?: IAudio;
     online_status?: IGroupOnlineStatus;
 }
-
-export type IGroupCounters = Partial<{
-    photos?: number;
-    albums?: number;
-    audios?: number;
-    videos?: number;
-    topics?: number;
-    docs?: number;
-}>;
 
 export interface IGroupOnlineStatus {
     status: 'online' | 'none';

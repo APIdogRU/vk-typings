@@ -47,6 +47,7 @@ export * from './IGroup';
 export * from './IGroupBanInfo';
 export * from './IGroupBanItem';
 export * from './IGroupContact';
+export * from './IGroupCounters';
 export * from './IGroupCover';
 export * from './IGroupCropPhoto';
 export * from './IGroupLink';

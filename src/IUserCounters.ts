@@ -1,17 +1,21 @@
-export type IUserCounters = Partial<{
-    albums: number;
-    videos: number;
-    audios: number;
-    photos: number;
-    groups: number;
-    gifts: number;
-    friends: number;
-    online_friends: number;
-    mutual_friends: number;
-    posts: number;
-    user_photos: number;
-    followers: number;
-    subscriptions: number;
-    pages: number;
-    clips_followers: number;
-}>;
+export interface IUserCounters {
+    albums?: number;
+    audios?: number;
+    followers?: number;
+    friends?: number;
+    gifts?: number;
+    groups?: number;
+    online_friends?: number;
+    pages?: number;
+    photos?: number;
+    subscriptions?: number;
+    user_photos?: number;
+    videos?: number;
+    video_playlists?: number;
+    new_photo_tags?: number;
+    new_recognition_tags?: number;
+    articles?: number;
+    mutual_friends?: number;
+    posts?: number;
+    clips_followers?: number;
+}
