@@ -1,4 +1,4 @@
-import { IPhotoSize, IPhotoSizeRequireSource } from './IPhotoSize';
+import type { IPhotoSize, IPhotoSizeRequireSource } from './IPhotoSize';
 
 export interface IPollPhoto {
     id: number;
