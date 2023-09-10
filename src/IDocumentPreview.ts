@@ -1,4 +1,4 @@
-import type { IPhotoSize } from './IPhotoSize';
+import type { IPhotoSizeRequireSource, IPhotoSize, IPhotoSizeRequireType } from './IPhotoSize';
 
 export interface IDocumentPreview {
     photo?: IDocumentPreviewPhoto;
@@ -9,7 +9,7 @@ export interface IDocumentPreview {
 }
 
 export interface IDocumentPreviewPhoto {
-    sizes: IPhotoSize<'src'>[];
+    sizes: Array<IPhotoSizeRequireType<IPhotoSizeRequireSource<IPhotoSize, 'src'>>>;
 }
 
 export interface IDocumentPreviewVideo {

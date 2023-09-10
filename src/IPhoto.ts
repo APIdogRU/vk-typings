@@ -1,5 +1,5 @@
 import type { ILikesInfo } from './ILikesInfo';
-import type { IPhotoSize } from './IPhotoSize';
+import type { IPhotoSize, IPhotoSizeRequireSource, IPhotoSizeRequireType } from './IPhotoSize';
 import type { IRepostsInfo } from './IRepostsInfo';
 
 export interface IPhoto {
@@ -10,7 +10,7 @@ export interface IPhoto {
     user_id: number;
     text: string;
     date: number;
-    sizes: IPhotoSize[];
+    sizes: Array<IPhotoSizeRequireType<IPhotoSizeRequireSource<IPhotoSize, 'url'>>>;
     width?: number;
     height?: number;
     has_tags?: boolean;

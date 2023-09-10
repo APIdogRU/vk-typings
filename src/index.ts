@@ -89,6 +89,7 @@ export * from './IPoll';
 export * from './IPollAnswer';
 export * from './IPollBackground';
 export * from './IPollExtended';
+export * from './IPollPhoto';
 export * from './IPost';
 export * from './IPostActivity';
 export * from './IPostApp';

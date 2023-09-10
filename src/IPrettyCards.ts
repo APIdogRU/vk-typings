@@ -8,7 +8,7 @@ export interface IPrettyCard {
     card_id: string;
     link_url: string;
     title: string;
-    images: Exclude<IPhotoSize, 'type'>[];
+    images: Omit<IPhotoSize, 'type'>[];
     button: object; // wtf
     price: string;
     price_old?: string;

@@ -1,6 +1,6 @@
 import type { IPhoto } from './IPhoto';
 import type { IPhotoPrivacy } from './IPhotoPrivacy';
-import type { IPhotoSize } from './IPhotoSize';
+import type { IPhotoSize, IPhotoSizeRequireSource, IPhotoSizeRequireType } from './IPhotoSize';
 
 export interface IPhotoAlbum {
     owner_id: number;
@@ -12,7 +12,7 @@ export interface IPhotoAlbum {
     updated: number;
     size: number;
     thumb_id?: number;
-    thum_is_last?: 0 | 1;
+    thumb_is_last?: 0 | 1;
     privacy_view: IPhotoPrivacy;
     privacy_comment: IPhotoPrivacy;
     /** Только в альбомах сообщества */
@@ -24,7 +24,7 @@ export interface IPhotoAlbum {
     /** С need_covers=1, без photo_sizes=1 */
     thumb_src?: string;
     /** С need_covers=1 и photo_sizes=1 */
-    sizes?: IPhotoSize[];
+    sizes?: Array<IPhotoSizeRequireType<IPhotoSizeRequireSource<IPhotoSizeRequireSource<IPhotoSize, 'src'>, 'url'>>>;
     /** Если альбом - это прикрепление */
     thumb?: IPhoto;
 }
