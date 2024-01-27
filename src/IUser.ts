@@ -2,6 +2,7 @@ import type { IAccountPhotoSize } from './IAccountPhotoSize';
 import type { IAudio } from './IAudio';
 import type { ICity } from './ICity';
 import type { ICountry } from './ICountry';
+import type { IOwnerCover } from './IOwnerCover';
 import type { IPhoto } from './IPhoto';
 import type { IStatusImage } from './IStatusImage';
 import type { IUniversityItem } from './IUniversityItem';
@@ -47,6 +48,7 @@ interface IUserExtended {
     can_ban: boolean;
     can_call: boolean;
     can_see_all_posts: boolean;
+    cover?: IOwnerCover;
     service_description: string;
     sex: number;
     maiden_name: string;

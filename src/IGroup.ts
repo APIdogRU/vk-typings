@@ -5,7 +5,7 @@ import type { ICountry } from './ICountry';
 import type { IGroupBanInfo } from './IGroupBanInfo';
 import type { IGroupContact } from './IGroupContact';
 import type { IGroupCounters } from './IGroupCounters';
-import type { IGroupCover } from './IGroupCover';
+import type { IOwnerCover } from './IOwnerCover';
 import type { IGroupCropPhoto } from './IGroupCropPhoto';
 import type { IGroupLink } from './IGroupLink';
 import type { IPlace } from './IPlace';
@@ -75,7 +75,7 @@ export interface IGroup extends IAccountPhotoSize {
     city?: ICity;
     contacts?: IGroupContact[];
     counters?: IGroupCounters;
-    cover?: IGroupCover;
+    cover?: IOwnerCover;
     crop_photo?: IGroupCropPhoto;
     description?: string;
     fixed_post?: number;
