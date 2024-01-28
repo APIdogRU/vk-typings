@@ -92,10 +92,31 @@ interface IUserExtended {
         last_name: string;
     };
     status_audio: IAudio;
-    activity: string;
+    activities: string;
+    interests: string;
+    music: string;
+    movies: string;
+    tv: string;
+    books: string;
+    games: string;
+    quotes: string;
     wall_comments?: 1;
     wall_default?: 'all' | 'owner';
     is_no_index?: boolean;
+    personal: {
+        political?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9;
+        langs?: string[];
+        langs_full?: Array<{
+            id: number;
+            native_name: string;
+        }>;
+        religion?: string;
+        inspired_by?: string;
+        people_main?: 1 | 2 | 3 | 4 | 5 | 6;
+        life_main?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8;
+        smoking?: 1 | 2 | 3 | 4 | 5;
+        alcohol?: 1 | 2 | 3 | 4 | 5;
+    };
 }
 
 interface IUserLastSeen {
