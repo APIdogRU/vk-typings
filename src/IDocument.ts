@@ -11,5 +11,6 @@ export interface IDocument {
     date: number;
     type: number;
     is_licensed?: 0 | 1;
+    is_unsafe?: 0 | 1;
     preview?: IDocumentPreview;
 }

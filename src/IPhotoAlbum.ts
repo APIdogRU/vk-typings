@@ -12,15 +12,20 @@ export interface IPhotoAlbum {
     updated: number;
     size: number;
     thumb_id?: number;
+    can_delete: boolean;
+    can_include_to_feed: boolean;
+    feed_disabled: 0 | 1;
+    feed_has_pinned: 0 | 1;
+
     thumb_is_last?: 0 | 1;
     privacy_view: IPhotoPrivacy;
     privacy_comment: IPhotoPrivacy;
     /** Только в альбомах сообщества */
     can_upload?: boolean;
     /** Только в альбомах сообщества */
-    upload_by_admins_only?: boolean;
+    upload_by_admins_only?: 0 | 1;
     /** Только в альбомах сообщества */
-    comments_disabled?: boolean;
+    comments_disabled?: 0 | 1;
     /** С need_covers=1, без photo_sizes=1 */
     thumb_src?: string;
     /** С need_covers=1 и photo_sizes=1 */

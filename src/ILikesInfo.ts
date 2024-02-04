@@ -3,4 +3,5 @@ export interface ILikesInfo {
     count: number;
     user_likes: 0 | 1;
     can_publish?: 0 | 1;
+    repost_disabled?: boolean;
 }

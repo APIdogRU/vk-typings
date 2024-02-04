@@ -15,7 +15,7 @@ export interface IAudio {
     album_id?: number;
     genre_id?: number;
     date?: number;
-    no_search?: boolean;
+    no_search?: 0 | 1;
     is_hq?: boolean;
     content_restricted?: boolean;
     ads?: IAudioAds;
@@ -25,5 +25,7 @@ export interface IAudio {
     is_focus_track?: boolean;
     main_artists?: IAudioArtist[];
     short_videos_allowed?: false;
+    stories_cover_allowed?: boolean;
     stories_allowed?: false;
+    release_audio_id?: string;
 }
