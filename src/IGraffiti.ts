@@ -1,8 +1,16 @@
 export interface IGraffiti {
     id: number;
     owner_id: number;
-    url: string;
-    width: number;
-    height: number
-    access_key: string;
+
+    /** Это типа есть по официальной доке, в реальности нет */
+    url?: string;
+    /** Это типа есть по официальной доке, в реальности нет */
+    width?: number;
+    /** Это типа есть по официальной доке, в реальности нет */
+    height?: number;
+
+    /** Это типа по реальным данным */
+    photo_200?: string;
+    /** Это типа по реальным данным */
+    photo_586?: string;
 }

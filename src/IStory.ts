@@ -40,7 +40,7 @@ export interface IStoryPhoto extends IStoryBase<'photo'> {
 }
 
 export interface IStoryVideo extends IStoryBase<'video'> {
-    video: IVideo;
+    video: IVideo & Required<Pick<IVideo, 'image'>>;
 }
 
 export type IStory = IStoryPhoto | IStoryVideo;

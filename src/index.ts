@@ -14,6 +14,7 @@ export * from './IAudioLyrics';
 export * from './IAudioLyricsTimestamp';
 export * from './IAudioMessage';
 export * from './IAudioPlaylist';
+export * from './IAudioPlaylistPermissions';
 export * from './ICall';
 export * from './IChatAccess';
 export * from './IChatAcl';

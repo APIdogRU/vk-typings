@@ -4,6 +4,8 @@ export interface INote {
     title: string;
     /** Wiki-разметка */
     text: string;
+    /** HTML-код. В attachments в посте пустая строка */
+    text_wiki: string;
     date: number;
     /** Количество комментариев */
     comments: number;

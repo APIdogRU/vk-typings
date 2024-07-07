@@ -1,5 +1,8 @@
+import type { IAudio } from './IAudio';
 import type { IAudioAlbumThumb } from './IAudioAlbumThumb';
+import type { IAudioArtist } from './IAudioArtist';
 import type { IAudioGenre } from './IAudioGenre';
+import type { IAudioPlaylistPermissions } from './IAudioPlaylistPermissions';
 
 export interface IAudioPlaylist {
     owner_id: number;
@@ -15,13 +18,19 @@ export interface IAudioPlaylist {
     update_time: number;
     genres: IAudioGenre[];
     album_type: 'playlist' | 'main_only';
-    thumbs: IAudioAlbumThumb[];
+    thumbs?: IAudioAlbumThumb[];
     // meta?: {
     //     view: 'compact';
     // };
-    // audios?: IAudio[];
     year?: number;
-    // photo: IAudioAlbumThumb;
     is_explicit?: boolean;
-    // main_artists?: IAudioArtist[];
+
+    is_following?: boolean;
+    audios?: IAudio[];
+    main_artists?: IAudioArtist[];
+    photo?: IAudioAlbumThumb;
+    permissions?: IAudioPlaylistPermissions;
+    subtitle_badge?: boolean;
+    play_button?: boolean;
+    exclusive?: boolean;
 }

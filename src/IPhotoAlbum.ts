@@ -18,8 +18,10 @@ export interface IPhotoAlbum {
     feed_has_pinned: 0 | 1;
 
     thumb_is_last?: 0 | 1;
-    privacy_view: IPhotoPrivacy;
-    privacy_comment: IPhotoPrivacy;
+    privacy_view?: IPhotoPrivacy;
+    privacy_comment?: IPhotoPrivacy;
+    is_locked?: boolean;
+
     /** Только в альбомах сообщества */
     can_upload?: boolean;
     /** Только в альбомах сообщества */

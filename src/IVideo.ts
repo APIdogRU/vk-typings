@@ -14,9 +14,12 @@ export interface IVideo {
     album_id?: number;
     title: string;
     description: string;
-    duration: number;
+
+    /** Отсутствует у удалённых */
+    duration?: number;
+
     first_frame?: IVideoImage[];
-    image: IVideoImage[];
+    image?: IVideoImage[];
     date: number;
     adding_date?: number;
     views: number;
@@ -26,10 +29,12 @@ export interface IVideo {
     player?: string;
     platform?: string;
     can_add: 0 | 1;
-    can_edit: 0 | 1;
-    can_edit_privacy: 0 | 1;
-    can_delete: 0 | 1;
+    can_edit?: 0 | 1;
+    can_edit_privacy?: 0 | 1;
+    can_delete?: 0 | 1;
+    can_be_pinned?: boolean;
     is_private?: boolean;
+    is_pinned?: boolean;
     processing?: boolean;
     converting?: boolean;
     live?: boolean;
@@ -37,13 +42,14 @@ export interface IVideo {
     is_favorite?: boolean;
     is_author?: boolean;
     repeat?: boolean;
+    added?: 0 | 1;
     width?: number;
     height?: number;
     can_comment: 0 | 1;
     can_like: 0 | 1;
     can_repost: 0 | 1;
-    can_attach_link: 0 | 1;
-    can_subscribe?: boolean;
+    can_attach_link?: 0 | 1;
+    can_subscribe?: 0 | 1;
     /** only without callback */
     can_add_to_faves: 0 | 1;
     /** only without callback */
@@ -60,7 +66,6 @@ export interface IVideo {
     reposts?: IRepostsInfo;
     privacy_view?: IPhotoPrivacy;
     privacy_comment?: IPhotoPrivacy;
-    track_code: string;
     response_type?: 'full' | 'min';
     content_restricted?: 1;
     content_restricted_message?: string;

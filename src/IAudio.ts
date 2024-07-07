@@ -24,8 +24,8 @@ export interface IAudio {
     is_explicit?: boolean;
     is_focus_track?: boolean;
     main_artists?: IAudioArtist[];
-    short_videos_allowed?: false;
+    short_videos_allowed?: boolean;
     stories_cover_allowed?: boolean;
-    stories_allowed?: false;
+    stories_allowed?: boolean;
     release_audio_id?: string;
 }

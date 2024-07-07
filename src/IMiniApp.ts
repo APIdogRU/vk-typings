@@ -7,4 +7,6 @@ export interface IMiniApp {
     app: IApplication;
     images: IPhotoSize[];
     button_text: string;
+    is_default_icon?: boolean;
+    is_default_description?: boolean;
 }
