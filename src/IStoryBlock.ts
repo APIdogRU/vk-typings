@@ -3,6 +3,7 @@ import type { IStory } from './IStory';
 
 export interface IStoryBlockStories {
     type: 'stories';
+    id: string;
     stories: IStory[];
     has_unseen?: boolean;
     name: string;

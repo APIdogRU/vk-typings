@@ -13,6 +13,7 @@ export interface IPoll {
     can_vote?: boolean;
     can_repost?: boolean;
     can_share?: boolean;
+    can_report?: boolean;
     created: number;
     question: string;
     votes: number;
@@ -24,4 +25,5 @@ export interface IPoll {
     photo?: IPhoto;
     background?: IPollBackground;
     friends?: { id: number }[];
+    embed_hash?: string;
 }

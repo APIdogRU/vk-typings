@@ -53,9 +53,11 @@ export interface IVideo {
     /** only without callback */
     can_add_to_faves: 0 | 1;
     /** only without callback */
-    can_play_in_background?: boolean;
+    can_play_in_background?: 0 | 1;
     /** only without callback */
-    can_download?: boolean;
+    can_download?: 0 | 1;
+    /** only without callback */
+    is_from_message?: 0 | 1;
     /** only without callback */
     files?: Partial<Record<VideoFilesKey, string>> & {
         failover_host?: string;
@@ -74,4 +76,6 @@ export interface IVideo {
     /** Id of the user who uploaded the video if it was uploaded to a group by member */
     user_id?: number;
     restriction?: IVideoRestriction;
+    ov_id?: string;
+    thumb_hash?: string;
 }

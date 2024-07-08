@@ -15,6 +15,9 @@ interface IStoryBase<T extends 'photo' | 'video'> {
     /** Если true, то объект содержит только поля id, owner_id, is_deleted */
     is_deleted?: boolean;
     can_see?: 1;
+    can_like?: boolean;
+    can_hide?: 0 | 1;
+    is_ads?: boolean;
     link?: IStoryLink;
     parent_story_owner_id?: number;
     parent_story_id?: number;
@@ -24,7 +27,7 @@ interface IStoryBase<T extends 'photo' | 'video'> {
     can_share?: 0 | 1;
     can_comment?: 0 | 1;
     clickable_stickers?: IStoryClickableStickers;
-    views: number;
+    views?: number;
     access_key?: string;
     seen?: boolean;
     is_one_time?: boolean;
@@ -40,7 +43,7 @@ export interface IStoryPhoto extends IStoryBase<'photo'> {
 }
 
 export interface IStoryVideo extends IStoryBase<'video'> {
-    video: IVideo & Required<Pick<IVideo, 'image'>>;
+    video: Omit<IVideo, 'comments' | 'can_comment' | 'can_like' | 'can_repost' | 'can_add_to_faves'> & Required<Pick<IVideo, 'image'>>;
 }
 
 export type IStory = IStoryPhoto | IStoryVideo;

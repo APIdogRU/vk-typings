@@ -21,7 +21,7 @@ export interface IStoryClickableSticker {
     // type = poll
     poll?: IPoll;
 
-    style: 'transparent' | 'underline' | 'red_gradient';
+    style?: 'transparent' | 'underline' | 'red_gradient';
 
     // type = post
     post_owner_id?: number;
