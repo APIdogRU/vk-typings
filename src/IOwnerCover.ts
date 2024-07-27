@@ -1,6 +1,12 @@
 import type { IOwnerCoverImage } from './IOwnerCoverImage';
 
-export interface IOwnerCover {
-    enabled: boolean;
-    images?: IOwnerCoverImage[];
+interface IOwnerCoverDisabled {
+    enabled: 0;
 }
+
+interface IOwnerCoverEnabled {
+    enabled: 1;
+    images: IOwnerCoverImage[];
+}
+
+export type IOwnerCover = IOwnerCoverEnabled | IOwnerCoverDisabled;

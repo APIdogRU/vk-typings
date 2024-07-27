@@ -1,5 +1,7 @@
 export * from './IAccount';
 export * from './IAccountPhotoSize';
+export * from './IAddress';
+export * from './IAddressMetroStation';
 export * from './IApplication';
 export * from './IArticle';
 export * from './IAttachments';
@@ -51,6 +53,7 @@ export * from './IGroupContact';
 export * from './IGroupCounters';
 export * from './IGroupCropPhoto';
 export * from './IGroupLink';
+export * from './IGroupMainAddress';
 export * from './IKeyboard';
 export * from './IKeyboardButton';
 export * from './IKeyboardButtonAction';

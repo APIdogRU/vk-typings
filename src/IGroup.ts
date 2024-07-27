@@ -9,6 +9,7 @@ import type { IOwnerCover } from './IOwnerCover';
 import type { IGroupCropPhoto } from './IGroupCropPhoto';
 import type { IGroupLink } from './IGroupLink';
 import type { IPlace } from './IPlace';
+import type { IGroupMainAddress } from './IGroupMainAddress';
 
 /** Тип сообщества */
 export type GroupType = 'group' | 'page' | 'event';
@@ -53,10 +54,10 @@ export interface IGroup extends IAccountPhotoSize {
     screen_name: string;
     is_closed: GroupCloseStatus;
     deactivated?: 'deleted' | 'banned';
-    is_admin?: boolean;
+    is_admin?: 0 | 1;
     admin_level?: GroupAdminLevel;
-    is_member?: boolean;
-    is_advertiser?: boolean;
+    is_member?: 0 | 1;
+    is_advertiser?: 0 | 1;
     invited_by?: number;
     type: GroupType;
 
@@ -101,6 +102,7 @@ export interface IGroup extends IAccountPhotoSize {
     wiki_page?: string;
     status_audio?: IAudio;
     online_status?: IGroupOnlineStatus;
+    addresses?: IGroupMainAddress;
 }
 
 export interface IGroupOnlineStatus {
