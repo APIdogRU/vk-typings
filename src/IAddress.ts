@@ -52,7 +52,7 @@ export interface IAddress {
     work_info_status: AddressWorkInfoStatus;
 
     /** Расписание (при work_info_status=timetable и не в объекте group) */
-    timetable?: Record<AddressTimetableDayKey, IAddressTimetableDay>;
+    timetable?: Partial<Record<AddressTimetableDayKey, IAddressTimetableDay>>;
 }
 
 export type AddressWorkInfoStatus =
