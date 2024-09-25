@@ -139,6 +139,7 @@ export * from './IVideoTimelineThumbs';
 export * from './IViewsInfo';
 export * from './IVkApiError';
 export * from './IVkApiErrorObject';
+export * from './IVkApiExecuteError';
 export * from './IVkApiList';
 export * from './IVkApiListExtended';
 export * from './IVkApiResponse';
