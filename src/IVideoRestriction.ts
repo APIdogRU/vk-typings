@@ -10,6 +10,10 @@ export interface IVideoRestriction {
         width: number;
         height: number;
     }>;
+    button?: {
+        action: 'play';
+        title: string;
+    };
     disclaimer_type: number;
     list_icon: Array<{
         url: string;
@@ -22,7 +26,14 @@ export interface IVideoRestriction {
         // Видео недоступно, так как страница автора заблокирована
         // Видео удалено
         | 'do_not_disturb_outline'
-        | 'lock_outline' // Видео доступно только подписчикам
-        | 'delete_outline' // Видео недоступно на стороннем сайте
+
+        // Видео доступно только подписчикам
+        | 'lock_outline'
+
+        // Видео недоступно на стороннем сайте
+        | 'delete_outline'
+
+        // Видео с возрастным ограничением
+        | 'hide_outline'
     ;
 }
